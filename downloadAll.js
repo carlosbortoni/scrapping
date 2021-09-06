@@ -11,7 +11,7 @@ const filepath = path.resolve(__dirname, 'images');
 
   const imageURLs = await page.$$eval('.product_pod .thumbnail', imgsAll => imgsAll.map(img => img.src));
 
-  // console.log(imageURLs)
+  console.log(imageURLs)
 
   imageURLs.forEach(imageURL => {
     Downloader.download(imageURL, filepath, function(filename){
